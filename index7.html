@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset='utf-8'>
+  <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+  <title>hospital</title>
+  <meta name='viewport' content='width=device-width, initial-scale=1'>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel='stylesheet' type='text/css' media='screen' href='asset/styles.css'>
+  <script src='asset/main.js'></script>
+  <style>
+    body {
+      margin: 0;
+    }
+
+    ul.topnav {
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+      overflow: hidden;
+      background-color: #333;
+      position: -webkit-sticky;
+      /*position: sticky;*/
+      top: 0;
+    }
+
+    ul.topnav li {
+      float: left;
+    }
+
+    ul.topnav li a {
+      display: block;
+      color: white;
+      text-align: center;
+      padding: 14px 16px;
+      text-decoration: none;
+    }
+
+    ul.topnav li a:hover:not(.active) {
+      background-color: #111;
+    }
+
+    ul.topnav li a.active {
+      background-color: #04AA6D;
+    }
+
+    ul.topnav li.right {
+      float: right;
+    }
+
+    @media screen and (max-width: 600px) {
+
+      ul.topnav li.right,
+      ul.topnav li {
+        float: none;
+      }
+    }
+
+    li.dropdown {
+      display: inline-block;
+    }
+
+    .far {
+      filter: brightness(35%);
+    }
+
+    .centered {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      text-align: center;
+      font-size: 70px;
+      color: rgb(248, 248, 248);
+      margin-top: 250px;
+    }
+
+    .centere {
+      margin-top: 40px;
+    }
+
+    .bon {
+      background-color: black;
+      color: white;
+    }
+  </style>
+</head>
+
+<body>
+  <h1>Welcome to Amrani hospital page </h1>
+  <ul class="topnav">
+    <li><a class="active" href="#home">Home</a></li>
+    <li><a href="book.html">Appointment</a></li>
+    <!--<li><a href="#contact">Contact</a></li>-->
+    <li><a href="services.html">Services</a></li>
+
+    <!--<li class="right"><a href="#about">About</a></li> -->
+  </ul>
+
+  <div class="far" style="padding:0 16px; text-align: center;">
+    <h2>Welcome to Amrani</h2>
+
+    <p>book your appointment to see a doctor.</p>
+    <div class="bon"></div>
+    <!--<a href="appointment.html">appointmentform</a>-->
+    <img class="img-fluid" src="hos1.jpg"  alt="hos"  style="width:100vw; height:auto;" >
+  </div>
+  </div>
+  <div class="centered">
+    <h4 style="font-size: 5vw;">Amrani Hospital</h4><br>
+  </div><br><br>
+
+  <h1>Amrani hospital is dedicated to giving quality services to all our patients</h1> <br> <br>
+
+
+
+
+
+  <!-- Slideshow container -->
+  <div class="slideshow-container">
+
+    <!-- Full-width slides/quotes -->
+    <div class="mySlides">
+      <q>To provide quality service to all patients</q>
+      <p class="author">- Our Mission</p>
+    </div>
+
+    <div class="mySlides">
+      <q>To be the leading hospital in providing best healthcare country-wide</q>
+
+      <p class="author">- Our Vision</p>
+    </div>
+
+    <div class="mySlides">
+      <q>To service all patients with best healthcare.</q>
+      <p class="author">- Our goals</p>
+    </div>
+
+    <!-- Next/prev buttons -->
+    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+    <a class="next" onclick="plusSlides(1)">&#10095;</a>
+  </div>
+
+  <!-- Dots/bullets/indicators -->
+  <div class="dot-container">
+    <span class="dot" onclick="currentSlide(1)"></span>
+    <span class="dot" onclick="currentSlide(2)"></span>
+    <span class="dot" onclick="currentSlide(3)"></span>
+  </div>
+<script>
+  var slideIndex = 1;
+showSlides(slideIndex);
+
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("dot");
+  if (n > slides.length) {slideIndex = 1}
+    if (n < 1) {slideIndex = slides.length}
+    for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";
+    }
+    for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active", "");
+    }
+  slides[slideIndex-1].style.display = "block";
+  dots[slideIndex-1].className += " active";
+}
+</script>
+<!--
+  ---footer section--
+  <div id="wrapper">
+    <div id="footer">
+      <div class="footerFloat">
+        <h4><b>My ACOUNT</b></h4>
+        <p>sign in</p>
+        <p>register</p>
+        <p>doctorstories</p>
+      </div>
+      <div class="footerFloat">
+        <h4><b>care</b></h4>
+        <p>about us</p>
+        <p>services</p>
+        <p>policy</p>
+
+      </div>
+      <div class="footerFloat">
+        <h4><b>Amrani</b></h4>
+        <p>services</p>
+        <p>Our goals</p>
+        <p>prices</p>
+
+      </div>
+      <div class="footerFloat">
+        <h4><b>contact us</b></h4>
+        <p>Amrani@gmail.com</p>
+        <p>0702373546</p>
+        <p>+2547001002</p>
+      </div>
+      <div class="footerFloat">
+        <h4><b>HELP</b></h4>
+        <p>serives</p>
+        <p>workbook</p>
+        <p>work expertise</p>
+
+      </div>
+
+    </div> -->
+<!--contact form-->
+    <div class="container">
+      <center><h1>contact form</h1></center>
+      <form action="index3.1.html" method="POST">
+    
+        <label for="fname">First Name</label>
+        <input type="text" id="fname" name="firstname" placeholder="Your name.." >
+    
+        <label for="lname">Last Name</label>
+        <input type="text" id="lname" name="lastname" placeholder="Your last name..">
+    
+        <label for="country">Country</label>
+        <select id="country" name="country">
+          <option value="australia">Kenya</option>
+          <option value="canada">Uganda</option>
+          <option value="usa">Tanzania</option>
+        </select>
+    
+        <label for="subject">Subject</label>
+        <textarea id="subject" name="subject" placeholder="Write something.." style="height:200px"></textarea>
+    
+        <input type="submit"  value="Submit">
+    
+      </form>
+    </div>
+    <footer class="foot">
+      <p>copyright samuel </p>
+    </footer>
+</body>
+
+</html>
