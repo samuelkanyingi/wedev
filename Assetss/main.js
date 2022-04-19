@@ -1,12 +1,3 @@
-/*
-let date = 0;
-let days = ["mon","tue","wednesday","thursday","friday"]
-let khan =["kwasi", "kwame","kwaki","kwak","kwaq"]
-
-let dateSelected = days[date]
-let khanNames = khan[date]
-console.log('Your birthday is '+dateSelected+'  and khan name is '+khanNames )
-*/
 function getFormInput(){
     var date = document.getElementById('dateInput').value
     if ( date == null || date == ""){
